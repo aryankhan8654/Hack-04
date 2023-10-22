@@ -13,4 +13,9 @@ int main(int argc, char **argv)
     double annual_rate_of_return = atof(argv[3]);
     double annual_inflation_rate = atof(argv[4]);
     int years_until_retirement = atoi(argv[5]);
+    if (initial_balance < 0 || monthly_contribution < 0 || annual_rate_of_return < 0 || annual_inflation_rate < 0 || years_until_retirement < 0)
+    {
+        fprintf(stderr, "Invalid input values. Please provide non-negative values.\n");
+        return 1;
+    }
     
