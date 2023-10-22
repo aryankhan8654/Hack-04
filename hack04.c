@@ -38,4 +38,7 @@ int main(int argc, char **argv)
 
         printf("%d\t%.2f\t%.2f\t%.2f\n", month, interest_earned, adjusted_contribution, balance);
     }
-    
+    printf("Total contributions: %.2f\n", total_contributions);
+
+    return 0;
+}
