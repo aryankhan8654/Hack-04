@@ -20,4 +20,7 @@ int main(int argc, char **argv)
     }
     double monthly_rate_of_return = annual_rate_of_return / 12.0;
     double monthly_inflation_rate = annual_inflation_rate / 12.0;
+    int num_months = years_until_retirement * 12;
+    double balance = initial_balance;
+    double total_contributions = 0.0;
     
