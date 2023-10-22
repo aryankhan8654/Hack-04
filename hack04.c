@@ -23,4 +23,19 @@ int main(int argc, char **argv)
     int num_months = years_until_retirement * 12;
     double balance = initial_balance;
     double total_contributions = 0.0;
+    printf("Month\tInterest Earned\tContribution\tBalance\n");
+
+    for (int month = 1; month <= num_months; month++)
+    {
+        
+        double interest_earned = balance * monthly_rate_of_return;
+        double adjusted_contribution = monthly_contribution / (1.0 + monthly_inflation_rate);
+
+       
+        balance += interest_earned + adjusted_contribution;
+
+        total_contributions += adjusted_contribution;
+
+        printf("%d\t%.2f\t%.2f\t%.2f\n", month, interest_earned, adjusted_contribution, balance);
+    }
     
