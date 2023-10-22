@@ -18,4 +18,6 @@ int main(int argc, char **argv)
         fprintf(stderr, "Invalid input values. Please provide non-negative values.\n");
         return 1;
     }
+    double monthly_rate_of_return = annual_rate_of_return / 12.0;
+    double monthly_inflation_rate = annual_inflation_rate / 12.0;
     
